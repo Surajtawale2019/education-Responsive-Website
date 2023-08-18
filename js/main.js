@@ -28,7 +28,7 @@ faqs.forEach(faq =>
             icon.className = "uil uil-plus";
         }
     })
-})
+});
 
 
 // for responsive nav Button / bar

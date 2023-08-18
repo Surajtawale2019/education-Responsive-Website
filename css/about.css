@@ -1,0 +1,200 @@
+
+.about_achive
+{
+    margin-top: 1rem;
+}
+
+.about_achive-container
+{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+}
+
+.about_achive-right > p
+{
+    margin: 1.6rem 0 2.5rem;
+}
+
+.achive_cards
+{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 1.5rem;
+}
+
+.achive_card
+{
+    background: var(--color-bg1);
+    border-radius: 1rem;
+    padding: 1.6rem;
+    text-align: center;
+    transition: var(--transition);
+}
+.achive_card:hover
+{
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(0,0,0,0.3);
+}
+.achive-icon 
+{
+    background: var(--color-danger);
+    display: inline-block;
+    margin-bottom: 2rem;
+    padding: 0.6rem 1.3rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+}
+
+.achive_card:nth-child(2) .achive-icon
+{
+    background: var(--color-success);
+}
+.achive_card:nth-child(3) .achive-icon
+{
+    background: var(--color-primary);
+}
+
+.achive_card p
+{
+    margin-top: 1rem;
+}
+
+
+
+
+
+/*          Team Style       */
+
+.team
+{
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0,0,0,0.5);
+}
+
+.team_container
+{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 2rem;
+}
+
+.team-member
+{
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+.team-member:hover
+{
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.team-member-img  img
+{   
+    filter: saturate(0);
+}
+.team-member:hover img
+{
+    filter: saturate(1);
+}
+
+.team-member-info *
+{
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.team-member-info p
+{
+    color: var(--color-light);
+}
+
+.team-member-socials
+{
+    position: absolute;
+    top: 50%;
+    right: -100%;
+    background: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem 0 0 1rem;
+    transform: translateY(-50%);
+    box-shadow: -2rem 0 2rem rgba(0,0,0,0.3);
+    transition: var(--transition);
+}
+.team-member:hover .team-member-socials
+{
+    right: 0;
+}
+
+.team-member-socials a
+{
+    padding: 1rem;
+}
+
+
+
+
+
+/*          Responsive   for tablet     */
+
+
+@media screen and (max-width : 1024px)
+{
+    .about_achive
+    {
+        margin-top: -2rem;
+    }
+    .about_achive-container
+    {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    .about_achive-left
+    {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* Team */
+
+    .team_container
+    {
+        grid-template-columns: repeat(3 , 1fr);
+        gap: 1.5rem;
+    }
+    .team-member
+    {
+        padding: 1rem;
+    }
+}
+
+/*          Responsive   for Phone     */
+
+@media screen and (max-width : 600px)
+{
+    .achive_cards
+    {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .team_container
+    {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .team-member
+    {
+        padding: 0;
+    }
+    .team-member p
+    {
+        margin-bottom: 1.5rem;
+    }
+}
